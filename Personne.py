@@ -8,7 +8,7 @@ class Personne :
         print(f" Nom : {self.nom} \n Prenom : {self.prenom} \n cin : {self.cin}")
 class Vaccine(Personne) :
     def __init__(self,nom,prenom,cin,code,date) :
-        super().__init__(self,nom,prenom,cin)
+        super().__init__(nom,prenom,cin)
         self.__code=code
         self.__date=date
     def get_code(self):
@@ -20,10 +20,10 @@ class Vaccine(Personne) :
     def set_date(self,date1) :
         self.__date=date1
     def toString(self):
-        print(f" Nom : {super().nom} Prenom : {super().prenom} cin : {super().cin} de code de vaccination : {self.__code} a la date {self.__date}")
+        print(super().toString(),f" de code de vaccination : {self.__code} a la date {self.__date}")
 class Vaccin(Personne) :
     def __init__(self,nom,prenom,cin,code,nom_1,dure):
-        super().__init__(self,nom,prenom,cin)
+        super().__init__(nom,prenom,cin)
         self.code=code
         self.nom_1= nom_1
         self.dure=dure
@@ -31,4 +31,7 @@ class Vaccin(Personne) :
         print(f" Nom : {super().nom} Prenom : {super().prenom} cin : {super().cin} de code de vaccination : {self.__code} a la date {self.__date} de nom vaccin : {self.name_1} a la durée {self.dure}")      
 P1 = Personne("Diarra","Moussa","je ne sais quoi")
 P1.toString()
+vc=Vaccine("Diarra","Moussa","je ne sais quoi",12,"2022/21/10")
+vc.toString()
+v = Vaccin("Diarra","Moussa","je ne sais quoi",11,"Unknow","2H:12M")
  
